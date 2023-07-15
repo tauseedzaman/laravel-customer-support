@@ -1,4 +1,4 @@
-<p style="text-align:center;width:100%;"><img src="/art/preview.png" alt="Chatify Laravel Package"></p>
+<p style="text-align:center;width:100%;"><img src="https://github.com/tauseedzaman/laravel-customer-support/assets/64689921/582e0e3d-a07d-4fa8-9676-70eec1c29b27" alt="Chatify Laravel Package"></p>
 
 <p align="center">
 <a href="https://github.com/laravel/telescope/actions"><img src="https://poser.pugx.org/munafio/chatify/v/stable?style=flat-square" alt="Build Status"></a>
@@ -6,10 +6,10 @@
 <a href="https://packagist.org/packages/munafio/chatify"><img src="https://poser.pugx.org/munafio/chatify/license?style=flat-square" alt="License"></a>
 </p>
 
-## Chatify Based Laravel Customer Support Package
-This is the customer service version for chatify package, we have customized the chatify so this can be used as customer service live chat package... its not completed yet
+## Chatify-Based Laravel Customer Support Package
+This is the customer service version for Chatify package, we have customized the Chatify so this can be used as a customer service live chat package... its not completed yet
 
-this will allow webmaster to chat live with there customers,
+this will allow webmasters to chat live with their customers,
 
 
 ## Installation
