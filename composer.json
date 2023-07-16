@@ -1,44 +1,44 @@
 {
-  "name": "munafio/chatify",
-  "description": "A package for Laravel PHP Framework to add a complete real-time chat system.",
-  "type": "library",
-  "keywords": [
-    "laravel",
-    "messenger",
-    "conversations",
-    "chat",
-    "php",
-    "pusher",
-    "realtime",
-    "real-time",
-    "chatify"
-  ],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Munaf A. Mahdi",
-      "email": "munafaqeelmahdi@gmail.com"
+    "name": "tauseedzaman/laravel-customer-support",
+    "description": "A package for Laravel PHP Framework which is based on chatify package and is used to add live customer support to apps.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "customer-support",
+        "conversations",
+        "chat",
+        "php",
+        "pusher",
+        "realtime",
+        "real-time",
+        "laravel-customer-support",
+        "tauseedzaman",
+        "chatify"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "tauseedzaman",
+        "email": "tauseedzaman@protonmail.com"
+    }],
+    "homepage": "https://github.com/tauseedzaman/laravel-customer-support",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "pusher/pusher-php-server": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chatify\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chatify\\ChatifyServiceProvider"
+            ],
+            "aliases": {
+                "Chatify": "Chatify\\Facades\\ChatifyMessenger"
+            }
+        }
     }
-  ],
-  "homepage": "https://github.com/munafio/chatify",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-    "pusher/pusher-php-server": "^7.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "Chatify\\": "src/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Chatify\\ChatifyServiceProvider"
-      ],
-      "aliases": {
-        "Chatify": "Chatify\\Facades\\ChatifyMessenger"
-      }
-    }
-  }
 }
