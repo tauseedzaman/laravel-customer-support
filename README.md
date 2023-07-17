@@ -13,15 +13,15 @@ this will allow webmasters to chat live with their customers,
 
 
 ## Installation
-``
+```
 composer require tauseedzaman/laravel-customer-support
-``
+```
 
 install
 
-``
+```
 php artisan chatify:install
-``
+```
 
 Configure the Pusher 
 
@@ -29,25 +29,32 @@ Configure the Pusher
 add this header in your layouts file
 
 ```
-    <meta name="url" content="{{ url('') . '/' . config('chatify.routes.prefix') }}" data-user="{{ auth()->id() }}">
-
+<meta name="url" content="{{ url('') . '/' . config('chatify.routes.prefix') }}" data-user="{{ auth()->id() }}">
 ```
 put this in the header of your layouts file
 ```
-    {!! view('Chatify::layouts.ClientHeader') !!}
+{!! view('Chatify::layouts.ClientHeader') !!}
 ```
 
 put this somewhere in your layouts file. i.e app.blade.php
 ```
-        {!! view('Chatify::layouts.ClientChatBox') !!}
-
+{!! view('Chatify::layouts.ClientChatBox') !!}
 ```
 
 put this in the footer/bottom section of your layouts file
 ```
-    {!! view('Chatify::layouts.ClientFooter') !!}
+{!! view('Chatify::layouts.ClientFooter') !!}
 ```
+You are good to go
 
+ if you get this error in your browser console
+![image](https://github.com/tauseedzaman/laravel-customer-support/assets/64689921/c6f4d26c-7248-4679-9cb5-985d9f501471)
+
+
+then change strict to false in app/database.php
+```
+'strict' => false
+```
 
 ## Chatify Demo
 
