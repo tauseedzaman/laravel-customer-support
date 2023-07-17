@@ -541,7 +541,6 @@ screen and (max-width: 450px) {
 }
 
 .message {
-    --primary-color: #2180f3;
     font-family: sans-serif;
     margin: 0px;
     padding: 6px 15px 5px;
@@ -552,15 +551,19 @@ screen and (max-width: 450px) {
     box-shadow: 0px 6px 11px rgba(18, 67, 105, 0.03);
     direction: ltr;
     color: rgb(255, 255, 255) !important;
-    background: var(--primary-color) !important;
 }
 
-.message-time {
-    font-family: sans-serif;
-    word-break: break-word;
-    color: #656b75;
+.message-card .message-time {
     display: inline-block;
     font-size: 11px;
+}
+
+.message-card .message .message-time:before {
+    content: "";
+    background: transparent;
+    width: 4px;
+    height: 4px;
+    display: inline-block;
 }
 
 .message-hint {
@@ -644,6 +647,10 @@ screen and (max-width: 450px) {
 
 .mc-sender {
     justify-content: flex-end;
+}
+
+.message-card.mc-sender .message {
+    background: #2180f3 !important;
 }
 
 

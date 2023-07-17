@@ -1,9 +1,9 @@
 <p style="text-align:center;width:100%;"><img src="https://github.com/tauseedzaman/laravel-customer-support/assets/64689921/582e0e3d-a07d-4fa8-9676-70eec1c29b27" alt="Chatify Laravel Package"></p>
 
 <p align="center">
-<a href="https://github.com/laravel/telescope/actions"><img src="https://poser.pugx.org/munafio/chatify/v/stable?style=flat-square" alt="Build Status"></a>
-<a href="https://packagist.org/packages/munafio/chatify"><img src="https://poser.pugx.org/munafio/chatify/downloads?style=flat-square" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/munafio/chatify"><img src="https://poser.pugx.org/munafio/chatify/license?style=flat-square" alt="License"></a>
+<a href="https://github.com/laravel/telescope/actions"><img src="https://poser.pugx.org/tauseedzaman/laravel-customer-support/v/stable?style=flat-square" alt="Build Status"></a>
+<a href="https://packagist.org/packages/tauseedzaman/laravel-customer-support"><img src="https://poser.pugx.org/tauseedzaman/laravel-customer-support/downloads?style=flat-square" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/tauseedzaman/laravel-customer-support"><img src="https://poser.pugx.org/tauseedzaman/laravel-customer-support/license?style=flat-square" alt="License"></a>
 </p>
 
 ## Chatify-Based Laravel Customer Support Package
@@ -51,7 +51,7 @@ put this in the footer/bottom section of your layouts file
 
 ## Chatify Demo
 
-- Chatify Demo app - [Click Here](https://github.com/munafio/chatify-demo).
+- Chatify Demo app - [Click Here](https://github.com/tauseedzaman/laravel-customer-support-demo).
 <!-- - Demo video on YouTube - [Click Here](https://youtu.be/gjo74FUJJPI) -->
 
 ## Chatify Official Documentation
