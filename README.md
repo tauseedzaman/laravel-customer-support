@@ -1,4 +1,5 @@
-<p style="text-align:center;width:100%;"><img src="https://github.com/tauseedzaman/laravel-customer-support/assets/64689921/582e0e3d-a07d-4fa8-9676-70eec1c29b27" alt="Chatify Laravel Package"></p>
+<p style="text-align:center;width:100%;"><img src="https://github.com/tauseedzaman/laravel-customer-support/assets/64689921/c72bd476-5ae1-4423-8b9e-4d47f34c80a3" alt="Chatify Laravel Package"></p>
+
 
 <p align="center">
 <a href="https://github.com/laravel/telescope/actions"><img src="https://poser.pugx.org/tauseedzaman/laravel-customer-support/v/stable?style=flat-square" alt="Build Status"></a>
@@ -7,7 +8,7 @@
 </p>
 
 ## Chatify-Based Laravel Customer Support Package
-This is the customer service version for Chatify package, we have customized the Chatify so this can be used as a customer service live chat package... its not completed yet
+This is the customer service version for Chatify package, we have customized the Chatify so this can be used as a customer service live chat package...
 
 this will allow webmasters to chat live with their customers,
 
@@ -55,20 +56,14 @@ then change strict to false in app/database.php
 ```
 'strict' => false
 ```
+## Demo
 
-## Chatify Demo
-
-- Chatify Demo app - [Click Here](https://github.com/tauseedzaman/laravel-customer-support-demo).
-<!-- - Demo video on YouTube - [Click Here](https://youtu.be/gjo74FUJJPI) -->
+- Demo app - [Click Here](https://laravel-customer-support-demo.tauseedzaman.com).
 
 ## Chatify Official Documentation
 
-The official documentation can be found [here](https://chatify.munafio.com)
-
-## Chatify Author
-
-- [Munaf A. Mahdi](https://www.munafio.com)
+As This Package is Derived from Chatify, Here Are The Chatify official [documentation](https://chatify.munafio.com)
 
 ## License
 
-Chatify is licensed under the [MIT license](https://choosealicense.com/licenses/mit/)
+Laravel-Customer-Support is licensed under the [MIT license](https://choosealicense.com/licenses/mit/)
