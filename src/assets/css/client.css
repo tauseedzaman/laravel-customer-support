@@ -541,16 +541,18 @@ screen and (max-width: 450px) {
 }
 
 .message {
+    --message-card-color: #e3e3e3d1;
     font-family: sans-serif;
-    margin: 0px;
-    padding: 6px 15px 5px;
+    margin: 0;
+    padding: 6px 15px;
+    padding-bottom: 5px;
     width: -webkit-fit-content;
     border-radius: 20px;
     word-break: break-word;
     display: table-cell;
+    background: var(--message-card-color);
+    color: #656b75;
     box-shadow: 0px 6px 11px rgba(18, 67, 105, 0.03);
-    direction: ltr;
-    color: rgb(255, 255, 255) !important;
 }
 
 .message-card .message-time {
@@ -578,6 +580,7 @@ screen and (max-width: 450px) {
 
 .typing-indicator {
     display: none;
+    margin-top: -33px;
 }
 
 .typing-dots .dot-1 {
@@ -681,5 +684,6 @@ screen and (max-width: 450px) {
 }
 
 #messages .message-card:last-child {
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    /* margin-bottom: 20px; */
 }

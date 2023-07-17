@@ -480,7 +480,7 @@ function sendMessage() {
                     console.error(data.error_msg);
                 } else {
                     // update contact item
-                    updateContactItem(getMessengerId());
+                    // updateContactItem(getMessengerId());
                     // temporary message card
                     const tempMsgCardElement = messagesContainer.find(
                         `.message-card[data-id=${data.tempID}]`
@@ -492,7 +492,7 @@ function sendMessage() {
                     // scroll to bottom
                     scrollToBottom(messagesCollect);
                     // send contact item updates
-                    sendContactItemUpdates(true);
+                    // sendContactItemUpdates(true);
                 }
             },
             error: () => {
@@ -642,11 +642,12 @@ channel.bind("messaging", function(data) {
 // // listen to typing indicator
 clientListenChannel.bind("client-typing", function(data) {
     if (data.from_id == getMessengerId() && data.to_id == auth_id) {
-        data.typing == true
-        messagesContainer.find(".typing-indicator").show()
+        data.typing == true ?
+            messagesContainer.find(".typing-indicator").show() :
+            messagesContainer.find(".typing-indicator").hide();
     }
     // scroll to bottom
-    scrollToBottom(messagesCollect);
+    scrollToBottom(messagesContainer);
 });
 
 // listen to seen event
@@ -657,17 +658,6 @@ clientListenChannel.bind("client-seen", function(data) {
                 .find(".fa-check")
                 .before('<span class="fas fa-check-double seen"></span> ');
             $(".message-time").find(".fa-check").remove();
-        }
-    }
-});
-
-// listen to contact item updates event
-clientListenChannel.bind("client-contactItem", function(data) {
-    if (data.to == auth_id) {
-        if (data.update) {
-            updateContactItem(data.from);
-        } else {
-            console.error("Can not update contact item!");
         }
     }
 });
@@ -751,19 +741,6 @@ function makeSeen(status) {
         from_id: auth_id, // Me
         to_id: getMessengerId(), // Messenger
         seen: status,
-    });
-}
-
-/**
- *-------------------------------------------------------------
- * Trigger contact item updates
- *-------------------------------------------------------------
- */
-function sendContactItemUpdates(status) {
-    return clientSendChannel.trigger("client-contactItem", {
-        from: auth_id, // Me
-        to: getMessengerId(), // Messenger
-        update: status,
     });
 }
 
@@ -877,45 +854,6 @@ function getContacts() {
             },
             error: (error) => {
                 setContactsLoading(false);
-                console.error(error);
-            },
-        });
-    }
-}
-
-/**
- *-------------------------------------------------------------
- * Update contact item
- *-------------------------------------------------------------
- */
-function updateContactItem(user_id) {
-    if (user_id != auth_id) {
-        $.ajax({
-            url: url + "/updateContacts",
-            method: "POST",
-            data: {
-                _token: csrfToken,
-                user_id,
-            },
-            dataType: "JSON",
-            success: (data) => {
-                $(".listOfContacts")
-                    .find(".messenger-list-item[data-contact=" + user_id + "]")
-                    .remove();
-                if (data.contactItem) $(".listOfContacts").prepend(data.contactItem);
-                if (user_id == getMessengerId()) updateSelectedContact(user_id);
-                // show/hide message hint (empty state message)
-                const totalContacts =
-                    $(".listOfContacts").find(".messenger-list-item").length || 0;
-                if (totalContacts > 0) {
-                    $(".listOfContacts").find(".message-hint").hide();
-                } else {
-                    $(".listOfContacts").find(".message-hint").show();
-                }
-                // update data-action required with [responsive design]
-                cssMediaQueries();
-            },
-            error: (error) => {
                 console.error(error);
             },
         });
@@ -1101,7 +1039,7 @@ function deleteConversation(id) {
             sendDeleteConversationEvent();
 
             // update contact list item
-            sendContactItemUpdates(true);
+            // sendContactItemUpdates(true);
         },
         error: () => {
             console.error("Server error, check your response");
