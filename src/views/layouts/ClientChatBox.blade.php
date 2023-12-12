@@ -22,18 +22,6 @@ $user = App\Models\User::find($id);
                 <div id="messages">
                     <p class="message-hint center-el"><span>Say Hi, 👋</span></p>
                 </div>
-                {{-- Typing indicator --}}
-                <div class="typing-indicator">
-                    <div class="message-card typing">
-                        <div class="message">
-                            <span class="typing-dots">
-                                <span class="dot dot-1"></span>
-                                <span class="dot dot-2"></span>
-                                <span class="dot dot-3"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="message-box">
