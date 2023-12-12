@@ -13,7 +13,7 @@ $user = App\Models\User::find($id);
     <div class="chat">
         <div class="chat-title">
             <h1>{{ $user->name }}</h1>
-            <h2>Customer Supprt</h2>
+            <h2>Customer Support</h2>
             <!--  <figure class="avatar">
         <img src="http://askavenue.com/img/17.jpg" /></figure>-->
         </div>
