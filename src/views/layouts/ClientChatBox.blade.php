@@ -13,7 +13,7 @@ $user = App\Models\User::find($id);
     <div class="chat">
         <div class="chat-title">
             <h1>{{ $user->name }}</h1>
-            <h2>Customer Supprt</h2>
+            <h2>Customer Support</h2>
             <!--  <figure class="avatar">
         <img src="http://askavenue.com/img/17.jpg" /></figure>-->
         </div>
@@ -21,18 +21,6 @@ $user = App\Models\User::find($id);
             <div class="m-body messages-container app-scroll messages-content" style="">
                 <div id="messages">
                     <p class="message-hint center-el"><span>Say Hi, 👋</span></p>
-                </div>
-                {{-- Typing indicator --}}
-                <div class="typing-indicator">
-                    <div class="message-card typing">
-                        <div class="message">
-                            <span class="typing-dots">
-                                <span class="dot dot-1"></span>
-                                <span class="dot dot-2"></span>
-                                <span class="dot dot-3"></span>
-                            </span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

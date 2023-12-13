@@ -642,9 +642,18 @@ channel.bind("messaging", function(data) {
 // // listen to typing indicator
 clientListenChannel.bind("client-typing", function(data) {
     if (data.from_id == getMessengerId() && data.to_id == auth_id) {
-        data.typing == true ?
-            messagesContainer.find(".typing-indicator").show() :
-            messagesContainer.find(".typing-indicator").hide();
+        let typing = `
+        <div class="message-card typing">
+            <div class="message">
+                <span class="typing-dots">
+                    <span class="dot dot-1"></span>
+                    <span class="dot dot-2"></span>
+                    <span class="dot dot-3"></span>
+                </span>
+            </div>
+        </div>
+        `
+        data.typing == true ? $("#messages").append(typing) : $("#messages").find(".typing").remove()
     }
     // scroll to bottom
     scrollToBottom(messagesContainer);
